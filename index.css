@@ -1,0 +1,987 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-color: #3D2723;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.fa-mug-hot {
+    font-size: 100px;
+    color: #F1F1E5;
+    position: relative;
+}
+
+.icon-section p {
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Kaushan Script';
+    color: #3D2723;
+}
+
+.icon-section p:last-of-type {
+    margin-top: -38px
+}
+
+.nav-icons {
+    display: none;
+    visibility: hidden;
+}
+    
+header nav a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3D2723;
+    padding: 9px 15px;
+    margin: -2px;
+    background-color: #F1F1E5;
+    font-family: 'Inter'
+}
+
+header nav a:hover {
+    background-color: #F2702A;
+    color: #F1F1E5;
+    transition: all 0.3s;
+}
+
+.active {
+    background-color: #F2702A;
+    color: #F1F1E5;
+}
+
+/* HOME */
+
+.home img {
+    width: 610px;
+    height: 763px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 15px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3)
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 22px;
+}
+
+.title {
+    font-family: 'Kaushan Script';
+    color: #F1F1E5;
+    font-size: 160px;
+}
+
+.subtitle {
+    font-family: 'Lily Script One';
+    color: #F1F1E5;
+    font-size: 110px;
+}
+
+.home p:nth-child(3) {
+    padding-top: 35px;
+}
+
+/* ABOUT US */
+
+.aboutus::before {
+    content:"";
+    background-color:#F1F1E5;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    left: 0;
+}
+
+.aboutus {
+    margin-bottom: 300px
+}
+
+.aboutus-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 300px;
+    color: #3D2723;
+}
+
+.aboutus img {
+    width: 459px;
+    height: 367px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3)
+}
+
+.aboutus-container p:first-of-type {
+    font-family: 'ABeeZee';
+    font-size: 64px;
+    padding-left: 40px;
+}
+
+.aboutus-container p:nth-of-type(2) {
+    font-family: 'ABeeZee';
+    font-size: 48px;
+    padding-left: 50px;
+}
+
+.aboutus-container p:last-of-type {
+    font-family: 'ABeeZee';
+    font-size: 30px;
+    padding-left: 55px;
+    padding-top: 20px;
+}
+
+.aboutus-container button {
+    width: 165px;
+    height: 44px;
+    font-size: 24px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    background-color: #F2702A;
+    color: #F1F1E5;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+/* PURCHASE */
+
+.purchase-title {
+    font-family: 'Inter';
+    font-size: 90px;
+    text-align: center;
+    color: #F1F1E5;
+    padding-bottom: 150px;
+    padding-top: 100px;
+    font-weight: 900;
+}
+
+.card-container {
+    width: 307px;
+    height: 276px;
+    perspective: 800px;
+}
+
+.card-container:hover > .card {
+    transform: rotateY(-180deg);
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #F1F1E5;
+    color: #3D2723;
+    padding-top: 20px;
+}
+
+.back p {
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'ABeeZee';
+    padding: 15px;
+}
+
+.back p:first-of-type {
+    font-size: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.purchase button {
+    width: 165px;
+    height: 44px;
+    font-size: 24px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    background-color: #F2702A;
+    color: #F1F1E5;
+    cursor: pointer;
+    margin-left: 685px;
+    margin-top: 150px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 135px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials::before {
+    width: 100%;
+    height: 700px;
+    left: 0;
+    background-color:#F1F1E5;
+    content: "";
+    position: absolute;
+    z-index: -1;
+}
+
+.testimonials-title {
+    font-family: 'Inter';
+    color:#3D2723;
+    font-size: 90px;
+    text-align: center;
+    font-weight: 900;
+    padding: 100px 0px;
+}
+
+.testimonials img {
+    border-radius: 50%;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.people {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'ABeeZee';
+    font-size: 20px;
+    color: #3D2723;
+    font-weight: 900;
+    padding: 30px;
+}
+
+/* CONTACT US */
+
+.contactus {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    color: #F1F1E5;
+    font-family: 'Inter';
+}
+
+form , .sitemap, ul, .contact {
+    display: flex;
+    flex-direction: column
+}
+
+.contactus h1 {
+    font-size: 31px;
+}
+
+.contactus p {
+    font-size: 20px;
+}
+
+input {
+    padding: 6px;
+    margin: 5px 0px;
+}
+
+textarea{
+    padding: 20px 10px;
+    margin: 10px 0px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+.contactus button {
+    width: 165px;
+    height: 44px;
+    font-size: 24px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    background-color: #F2702A;
+    color: #F1F1E5;
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+    margin-top: 20px
+}
+
+.contactus a {
+    color: #F1F1E5;
+    text-decoration: none;
+    padding: 5px 0px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+ul {
+    padding-top: 15px;
+}
+
+.contacts {
+    font-size: 20px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+footer p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Inter';
+    text-align: center;
+    color: #F1F1E5;
+    padding-bottom: 10px;
+}
+
+/* EXTRA LARGE SCREENS */
+
+@media (width <= 1536px) {
+    .container {
+        max-width: 1280px;
+    }
+
+    .purchase button {
+        margin-left: 557px;
+    }
+
+    .people div:nth-of-type(2) {
+        padding: 0px 40px;
+    }
+}
+
+/* LARGE SCREENS */
+
+@media (width <= 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+
+    header nav a {
+        font-size: 15px;
+    }
+
+    .title {
+        font-size: 130px;
+    }
+    
+    .subtitle {
+        font-size: 95px;
+    }
+
+    .home img {
+        width: 500px;
+        margin: 11px;
+    }
+
+    .aboutus {
+        margin-bottom: 0px
+    }
+    
+    .aboutus-container {
+        padding-top: 200px;
+    }
+
+    .aboutus-container p:first-of-type {
+        font-size: 55px;
+    }
+    
+    .aboutus-container p:nth-of-type(2) {
+        font-size: 40px;
+    }
+    
+    .aboutus-container p:last-of-type {
+        font-size: 25px;
+        padding-left: 50px;
+    }
+    
+    .aboutus-container button {
+        width: 150px;
+        font-size: 22px;
+    }
+
+    .purchase-title {
+        font-size: 80px;
+        margin-top: 300px;
+    }
+
+    .purchase button {
+        width: 150px;
+        font-size: 22px;
+        margin-left: 440px;
+    }
+
+    .testimonials-title {
+        font-size: 80px;
+        padding: 80px 0px;
+    }
+
+    .testimonials img {
+        width: 130px;
+    }
+    
+    .people {
+        font-size: 15px;
+        padding: 30px;
+    }
+
+    .contactus {
+        margin-top: 200px;
+        margin-bottom: 100px;
+    }
+    
+    .contactus h1 {
+        font-size: 28px;
+    }
+    
+    .contactus p {
+        font-size: 17px;
+    }
+    
+    .contactus button {
+        width: 150px;
+        font-size: 22px;
+    }
+    
+    .contactus a {
+        font-size: 17px;
+    }
+    
+    .contacts {
+        font-size: 17px;
+    }
+
+    .contact > .icon-section p {
+        padding: 5px;
+    }
+    
+    footer p {
+        font-size: 18px;
+    }
+}
+
+/* LAPTOPS */
+
+@media (width <= 1024px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .fa-mug-hot {
+        font-size: 90px;
+    }
+
+    .icon-section p {
+        margin-top: -55px;
+        font-size: 18px;
+    }
+    
+    .icon-section p:last-of-type {
+        margin-top: -36px
+    }
+
+    header nav a {
+        font-size: 13px;
+        padding: 9px;
+    }
+
+    .title {
+        font-size: 90px;
+    }
+    
+    .subtitle {
+        font-size: 65px;
+        margin-top: 30px;
+    }
+
+    .home img {
+        width: 400px;
+        height: 550px;
+        margin: 10px;
+    }
+
+    .aboutus img {
+        width: 359px;
+        height: 267px;
+    }
+    
+    .aboutus-container {
+        padding-top: 200px;
+    }
+
+    .aboutus::before {
+        height: 700px;
+    }
+
+    .aboutus-container p:first-of-type {
+        font-size: 45px;
+    }
+    
+    .aboutus-container p:nth-of-type(2) {
+        font-size: 30px;
+        padding-left: 48px;
+    }
+    
+    .aboutus-container p:last-of-type {
+        font-size: 18px;
+        padding-left: 48px;
+    }
+    
+    .aboutus-container button {
+        width: 140px;
+        height: 42px;
+        font-size: 20px;
+        margin-left: 45px
+    }
+
+    .purchase-title {
+        font-size: 70px;
+        margin-top: 200px;
+        padding-bottom: 100px;
+    }
+
+    .card-container {
+        width: 227px;
+        height: 206px;
+    }
+    
+    .back p {
+        font-size: 13px;
+        padding: 13px;
+    }
+    
+    .back p:first-of-type {
+        font-size: 20px;
+    }
+
+    .purchase button {
+        width: 140px;
+        height: 42px;
+        font-size: 20px;
+        margin-left: 320px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .testimonials-title {
+        font-size: 70px;
+        padding: 60px 0px;
+    }
+
+    .testimonials img {
+        width: 110px;
+    }
+    
+    .people {
+        font-size: 12px;
+        padding: 0px;
+    }
+
+    .testimonials::before {
+        height: 500px;
+    }
+
+    .contactus {
+        margin-bottom: 70px;
+    }
+    
+    .contactus h1 {
+        font-size: 23px;
+    }
+    
+    .contactus p {
+        font-size: 15px;
+    }
+    
+    .contactus button {
+        width: 140px;
+        height: 42px;
+        font-size: 20px;
+    }
+    
+    .contactus a {
+        font-size: 15px;
+    }
+    
+    .contacts {
+        font-size: 15px;
+    }
+    
+    footer p {
+        font-size: 15px;
+    }  
+}
+
+/* TABLETS */
+
+@media (width <= 768px) {
+    .container {
+        max-width: 640px;
+    }
+
+    .fa-mug-hot {
+        font-size: 80px;
+    }
+
+    .icon-section p {
+        margin-top: -50px;
+        font-size: 16px;
+    }
+    
+    .icon-section p:last-of-type {
+        margin-top: -32px
+    }
+
+    header nav a {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .title {
+        font-size: 75px;
+    }
+    
+    .subtitle {
+        font-size: 50px;
+        margin-top: 30px;
+    }
+
+    .home img {
+        width: 320px;
+        height: 440px;
+        margin: 10px;
+    }
+
+    .aboutus img {
+        width: 300px;
+        height: 230px;
+    }
+    
+    .aboutus-container {
+        padding-top: 150px;
+    }
+
+    .aboutus::before {
+        height: 550px;
+    }
+
+    .aboutus-container p:first-of-type {
+        font-size: 37px;
+    }
+    
+    .aboutus-container p:nth-of-type(2) {
+        font-size: 22px;
+        padding-left: 45px;
+    }
+    
+    .aboutus-container p:last-of-type {
+        font-size: 15px;
+        padding-left: 45px;
+    }
+    
+    .aboutus-container button {
+        width: 125px;
+        height: 40px;
+        font-size: 17px;
+        margin-left: 43px
+    }
+
+    .purchase-title {
+        font-size: 60px;
+        margin-top: 170px;
+        padding-bottom: 50px;
+    }
+
+    .cards {
+        display: grid;
+        row-gap: 30px;
+    }
+    
+    .back p {
+        font-size: 12px;
+    }
+
+    .purchase button {
+        width: 125px;
+        height: 40px;
+        font-size: 17px;
+        margin-left: 260px;
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+
+    .testimonials-title {
+        font-size: 60px;
+        padding: 40px 0px;
+    }
+
+    .people {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .people p {
+        margin-bottom: 60px;
+    }
+
+    .testimonials img {
+        width: 100px;
+        margin-top: 20px
+    }
+    
+    .people {
+        font-size: 13px;
+        padding: 0px;
+    }
+
+    .testimonials::before {
+        height: 100%;
+    }
+
+    .contactus {
+        margin-bottom: 50px;
+        margin-top: 50px
+    }
+    
+    .contactus h1 {
+        font-size: 20px;
+    }
+    
+    .contactus p {
+        font-size: 13px;
+    }
+    
+    .contactus button {
+        width: 125px;
+        height: 40px;
+        font-size: 17px;
+    }
+    
+    .contactus a {
+        font-size: 13px;
+    }
+    
+    .contacts {
+        font-size: 13px;
+    }
+    
+    footer p {
+        font-size: 13px;
+    }  
+}
+
+/* PHONES */
+
+@media (width <= 640px) {
+    .container {
+        max-width: 475px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .home img {
+        display: none;
+    }
+
+    .nav-icons {
+        display: flex;
+        visibility: visible;
+    }
+
+    .nav-icons a {
+        color: #F1F1E5;
+        padding: 0px 10px
+    }
+
+    .fa-mug-hot {
+        font-size: 70px;
+    }
+
+    .icon-section p {
+        margin-top: -43px;
+        font-size: 14px;
+    }
+    
+    .icon-section p:last-of-type {
+        margin-top: -27px
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 65px;
+        text-align: center;
+    }
+    
+    .subtitle {
+        font-size: 35px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .aboutus img {
+        display: none;
+    }
+    
+    .aboutus-container {
+        padding-top: 50px;
+    }
+
+    .aboutus::before {
+        height: 300px;
+    }
+
+    .aboutus-container p:first-of-type {
+        font-size: 35px;
+    }
+    
+    .aboutus-container p:nth-of-type(2) {
+        font-size: 20px;
+    }
+    
+    .aboutus-container p:last-of-type {
+        font-size: 14px;
+    }
+    
+    .aboutus-container button {
+        width: 110px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .purchase-title {
+        font-size: 40px;
+        margin-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .card-container {
+        width: 200px;
+        height: 180px;
+    }
+    
+    .back p {
+        font-size: 11px;
+        padding: 10px;
+    }
+
+    .back p:first-of-type {
+        font-size: 18px;
+    }
+
+    .purchase button {
+        width: 110px;
+        height: 38px;
+        font-size: 16px;
+        margin-left: 185px;
+    }
+
+    .testimonials-title {
+        font-size: 40px;
+    }
+
+    .people p {
+        margin-bottom: 20px;
+    }
+
+    .testimonials img {
+        width: 90px;
+        margin-top: 10px
+    }
+    
+    .people {
+        font-size: 12px;
+    }
+
+    .testimonials::before {
+        height: 700px;
+    }
+
+    .contactus {
+        margin-bottom: 20px;
+        margin-top: 20;
+        display: grid;
+        text-align: center;
+        row-gap: 50px;
+    }
+    
+    .contactus h1 {
+        font-size: 18px;
+    }
+    
+    .contactus p {
+        font-size: 11px;
+    }
+
+    input {
+        padding: 5px;
+    }
+    
+    textarea{
+        padding: 5px 5px;
+    }
+    
+    .contactus button {
+        width: 110px;
+        height: 38px;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+    
+    .contactus a {
+        font-size: 12px;
+    }
+    
+    .contacts {
+        font-size: 12px;
+    }
+    
+    footer p {
+        font-size: 12px;
+        margin-top: 50px;
+    }
+    
+    .contact > .icon-section p {
+        margin-left: 95px
+    }
+}
